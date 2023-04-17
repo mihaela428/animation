@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#050210;
+}
+
+
+.container{
+	min-width:650px;
+	min-height:500px;
+	margin:50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.box{
+	position: absolute;
+	width:auto;
+	margin:50px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#box0{
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	background: repeating-conic-gradient(#fb5dad, #55fb9f, #b97aff,#fb5dad);
+	filter: blur(65px);
+	animation-timing-function:linear;
+	z-index: 0;
+}
+
+#box1{
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	background: repeating-conic-gradient(#fb5dad, #55fb9f, #b97aff,#fb5dad);
+	animation-timing-function:linear;
+	z-index: 1;
+}
+#box2{
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	background-color:#050210;
+	z-index: 2;
+}
+
+.box{
+    animation-name: animation;
+    animation-duration: 1s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+}
+
+
+@keyframes animation {
+    from {
+        transform:rotate(0deg);
+    }
+ 
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+#box3{
+	width: 5px;
+	height: 5px;
+	border-radius: 100%;
+	background-color:#0A0A20;
+	z-index: 3;
+}
+
+.box-static{
+    animation-name: animation2;
+    animation-duration: 1s;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-out;
+	animation-timing-function:linear;
+}
+
+@keyframes animation2 {
+    from {
+        width: 5px;
+		height: 5px;
+		color: #0A0A20;
+    }
+ 
+    to {
+        width: 230px;
+		height: 230px;
+		color: #050210;
+    }
+}
+
+
+
